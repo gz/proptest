@@ -25,8 +25,8 @@ arbitrary!(Probability, MapInto<RangeInclusive<f64>, Self>;
 // These are Option<AnUninhabitedType> impls:
 
 arbitrary!(Option<string::ParseError>; None);
-#[cfg(feature = "unstable")]
-arbitrary!(Option<!>; None);
+//#[cfg(feature = "unstable")]
+//arbitrary!(Option<!>; None);
 
 arbitrary!([A: Arbitrary] opt::Option<A>, OptionStrategy<A::Strategy>,
     product_type![Probability, A::Parameters];
